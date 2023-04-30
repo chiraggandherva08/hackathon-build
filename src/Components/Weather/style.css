@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+#weather-heading {
+    color: rgb(33, 33, 33);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: calc(100% - 100px);
+
+    font-size: 20px;
+    margin-left: 30px;
+
+    color: rgb(29, 51, 177);
+}
+
+#error-city {
+    font-size: 2em;
+    color: red;
+
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.all-weather {
+    width: calc(100vw - 30px);
+    margin: auto;
+
+    max-width: 1200px;
+
+    padding: 20px 0px;
+}
+
+#date-sec {
+    width: calc(100% - 40px);
+    font-size: 12px;
+
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.358);
+    border-top-width: 0.5px;
+
+    padding-top: 10px;
+}
+
+.weather-for-seven-days {
+    width: calc(100%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.main-body {
+    width: 200px;
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-style: solid;
+    border-color: white;
+
+    overflow: hidden;
+
+    border-top-style: solid;
+    border-color: white;
+    border-radius: 4px;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+    transition-duration: 0.2s;
+}
+
+.main-body:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.2);
+    border-color: rgb(192, 192, 255);
+}
+
+.input-section {
+    width: 400px;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    width: 200px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    outline: 0;
+    border-style: none;
+    
+    padding: 0px 10px;
+    
+    background: rgba(255, 187, 0, 0.737);
+    color: white;
+
+    transition-duration: 0.5s;
+
+    font-size: 1.1em;
+
+    text-align: center;
+}
+
+#get-weather {
+    width: 100px;
+    height: 40px;
+
+    background: rgb(18, 43, 107);
+    color: white;
+
+    outline: 0;
+    border-style: none;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-section input:focus {
+    background: rgb(7, 44, 108);
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.349));
+
+    -webkit-user-drag: none;
+}
+
+.disc { 
+    height: 30px;
+    width: 80%;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    cursor: default;
+
+    color: rgb(59, 59, 59);
+
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp {
+    width: 90%;
+    height: 40px;
+    
+    text-align: center;
+    
+    display: flex;
+    justify-content: space-between;
+
+    color: rgb(59, 59, 59);
+}
+
+.max, .min, .current {
+    width: 25%;
+    height: 100%;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+
+    cursor: default;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(255, 254, 254, 0.1);
+
+    font-size: 13px;
+}
+
+@media (max-width: 450px) {
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+
+        width: 100%;
+        padding: 0px;
+    }
+
+    .main-body {
+        width: 150px;
+        height: 150px;
+    }
+
+    .disc {
+        font-size: 10px;
+    }
+    
+    .max, .min, .current {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-body {
+        width: 100%;
+    }
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+#weather-heading {
+    color: rgb(33, 33, 33);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: calc(100% - 100px);
+
+    font-size: 20px;
+    margin-left: 30px;
+
+    color: rgb(29, 51, 177);
+}
+
+#error-city {
+    font-size: 2em;
+    color: red;
+
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.all-weather {
+    padding: 20px 0px;
+
+    background: rgb(240, 240, 240);
+    transition-duration: 0.3s;
+
+    width: calc(100vw - 50px);
+    max-width: 1100px;
+    margin: auto;
+
+    display: none;
+    flex-direction: column;
+}
+
+.toggle-all-weather {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(0%);
+}
+
+.weather-close-tab {
+    width: 100%;
+    height: 20px;
+}
+
+.weather-close-tab img {
+    height: 100%;
+    margin-left: calc(100% - 30px);
+
+    cursor: pointer;
+}
+
+#date-sec {
+    width: 100px;
+
+    font-size: 10px;
+
+    margin-left: 10px;
+}
+
+.weather-for-seven-days {
+    width: calc(100%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.main-body {
+    width: 200px;
+    padding: 10px;
+    height: 200px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+.main-body:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.2);
+    border-color: rgb(192, 192, 255);
+}
+
+.input-section {
+    width: 400px;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    width: 200px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    outline: 0;
+    border-style: none;
+    
+    padding: 0px 10px;
+    
+    background: rgba(255, 187, 0, 0.737);
+    color: white;
+
+    transition-duration: 0.5s;
+
+    font-size: 1.1em;
+
+    text-align: center;
+}
+
+#get-weather {
+    width: 100px;
+    height: 40px;
+
+    background: rgb(18, 43, 107);
+    color: white;
+
+    outline: 0;
+    border-style: none;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-section input:focus {
+    background: rgb(7, 44, 108);
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.349));
+
+    -webkit-user-drag: none;
+}
+
+.disc { 
+    height: 30px;
+    /* width: 80%; */
+
+    font-size: 13px;
+
+    text-align: center;
+
+    cursor: default;
+
+    color: rgb(59, 59, 59);
+
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp {
+    height: 40px;
+    width: 150px;
+    
+    text-align: center;
+    
+    display: flex;
+    justify-content: space-between;
+
+    color: rgb(59, 59, 59);
+
+    margin-left: 10px;
+}
+
+.max, .min, .current {
+    height: 100%;
+
+
+    border-radius: 5px;
+
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+
+    cursor: default;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(255, 254, 254, 0.1);
+
+    font-size: 13px;
+}
+
+@media (max-width: 450px) {
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+
+        width: 100%;
+        padding: 0px;
+    }
+
+    .all-weather {
+        width: 100vw;
+    }
+
+    .main-body {
+        width: 150px;
+        height: 150px;
+
+        flex-direction: column;
+    }
+
+    .disc {
+        font-size: 10px;
+    }
+    
+    .max, .min, .current {
+        font-size: 10px;
+    }
+    
+    #date-sec {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-body {
+        width: calc(100vw - 50px);
+        flex-direction: row;
+
+        height: 60px;
+    }
+}

@@ -1,0 +1,16 @@
+.footer {
+    background: linear-gradient(#500457, #1a0457);
+    color: white;
+
+    width: calc(100vw - 100px);
+    padding: 20px 50px;
+}
+
+.footer h2 {
+    font-size: 1.2em;
+}
+
+.footer p {
+    font-size: 12px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+.trip-planner {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: auto;
+    margin-top: 10px;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+    width: 100vw;
+    height: 300px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    
+    background: linear-gradient(45deg, rgb(54, 9, 64), rgb(33, 12, 61));
+
+    gap: 5px;
+}
+
+.loading-trip {
+    width: 200px;
+    height: 100px;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: auto;
+    margin-top: 20px;
+
+    display: none;
+}
+
+#bar1, #bar2, #bar3, #bar4, #bar5 {
+    height: 100%;
+    width: 25px;
+
+    transition-duration: 1s;
+    border-radius: 20px;
+}
+
+#bar1 {
+    animation: animate-loading 1s 0.1s infinite;
+}
+#bar2 {
+    animation: animate-loading 1s 0.2s infinite;
+}
+#bar3 {
+    animation: animate-loading 1s 0.3s infinite;
+}
+#bar4 {
+    animation: animate-loading 1s 0.4s infinite;
+}
+#bar5 {
+    animation: animate-loading 1s 0.5s infinite;
+}
+
+@keyframes animate-loading {
+    0% {
+        height: 100%;
+        background: rgb(54, 9, 64);
+    } 50% {
+        height: 10%;
+        background: rgb(33, 12, 61);
+    } 100% {
+        height: 100%;
+        background: rgb(54, 9, 64);
+    }
+}
+
+.creating-trip {
+    margin: auto;
+    margin-top: 20px;
+    width: calc(100vw);
+    max-width: 500px;
+    
+    text-align: center;
+    
+    color: rgb(20, 20, 151);
+
+    display: none;
+    justify-content: center;
+
+    cursor: default;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.input-fields-for-planner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 200px;
+    height: 100%;
+
+    gap: 5px;
+
+    margin-left: 20px;
+}
+
+#starting-point, #ending-point, #number-of-days, #purpose {
+    height: 20px;
+    width: 100%;
+
+    padding: 5px 10px;
+
+    border-style: none;
+    border-radius: 5px;
+    outline: 0;
+
+    background: #ffffff1f;
+
+    color: white;
+}
+
+#mode-of-transport {
+    height: 30px;
+    width: 100px;
+
+    text-align: center;
+
+    border-style: none;
+    border-radius: 5px;
+    outline: 0;
+
+    background: #ffffff1f;
+
+    color: white;
+}
+
+#starting-point::placeholder, #ending-point::placeholder, #number-of-days::placeholder, #purpose::placeholder {
+    color: white;
+    font-size: 10px;
+}
+
+#generate-trip-btn {
+    background: rgb(245, 193, 104);
+    color: rgb(31, 70, 108);
+    outline: 0;
+    border-style: none;
+
+    height: 30px;
+    width: 100px;
+
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.planning-img {
+    height: 100%;
+}
+
+.planning-img img {
+    width: 100%;
+}
+
+.planned-trip {
+    margin: auto;
+    
+    overflow-y: scroll;
+    
+    padding: 20px 20px;
+    
+    background: rgb(240, 240, 240);
+    color: black;
+    
+    font-size: 15px;
+    
+    transition-duration: 0.3s;
+    
+    height: 0px;
+    width: calc(100vw - 50px);
+    opacity: 0;
+    max-width: 1100px;
+
+    border-top-style: solid;
+    border-top-color: white;
+    border-top-width: 3px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.plannedLists {
+    background: linear-gradient(45deg, rgb(54, 9, 64), rgb(33, 12, 61));
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    width: 500px;
+}
+
+.sustained {
+    background: linear-gradient(45deg, rgb(9, 64, 27), rgb(12, 47, 61));
+}
+
+.guidelines-sus {
+    font-size: 20px;
+    color: gold;
+}
+
+@media (max-width: 600px) {
+    .trip-planner {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .trip-planner {
+        padding: 20px 0px;
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    .planned-trip {
+        box-shadow: none;
+    }
+}

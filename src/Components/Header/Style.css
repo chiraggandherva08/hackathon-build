@@ -1,0 +1,121 @@
+.user_locations {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: auto;
+    margin-top: 30px;
+}
+
+#from-location, #to-location  {
+    width: 200px;
+    height: 40px;
+
+    border-radius: 10px;
+    background: #f2c226;
+
+    outline: 0;
+    border-style: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#to-location {
+    border-style: solid;
+    border-color: transparent;
+    text-align: center;
+    cursor: text;
+
+    border-radius: 0px;
+    background: #e3e3e3;
+
+    border-bottom-style: solid;
+    border-bottom-color: rgb(136, 136, 136);
+
+    padding: 0px 20px;
+
+    border-radius: 5px;
+}
+
+#to-location:focus {
+    border-style: solid;
+    border-color: rgb(132, 132, 255);
+}
+
+#from-location:hover, #to-location:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-for-destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.city-suggestions {
+    width: 300px;
+    height: 400px;
+
+    background: rgb(240, 240, 240);
+    color: rgb(83, 83, 83);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    padding: 5px 0px;
+    margin-top: 10px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+
+    list-style-type: none;
+
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+
+    display: none;
+}
+
+.cities-sugg {
+    min-height: 40px;
+    width: 90%;
+
+    padding: 0px 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.cities-sugg:hover {
+    cursor: pointer;
+    background: rgb(226, 226, 226);
+}
+
+@media (max-width: 800px) {
+    .user_locations {
+        flex-direction: column;
+        width: calc(100vw - 20px);
+    }
+}
+
+@media (max-width: 600px) {    
+    .menubar {
+        border-color: transparent;
+    }
+}

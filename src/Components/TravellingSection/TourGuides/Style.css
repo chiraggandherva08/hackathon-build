@@ -1,0 +1,47 @@
+#tour-guides-heading {
+    width: calc(100vw - 100px);
+    max-width: 1000px;
+
+    margin: auto;
+    color: rgb(0, 28, 70);
+
+    font-size: 30px;
+}
+
+.tour-guides {
+    width: calc(100vw - 50px);
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+}
+
+#add-tour-guide {
+    width: 250px;
+    height: 40px;
+    
+    padding: 10px;
+
+    font-size: 17px;
+    background: #5ca3ff;
+    color: white;
+
+    border-radius: 10px;
+
+    outline: 0;
+    border-style: none;
+    cursor: pointer;
+
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#add-tour-guide:hover {
+    background: #539dff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
